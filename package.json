@@ -4,10 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "if-env NODE_ENV=production && npm run -s serve || npm run -s dev",
-    "build": "preact build",
-    "serve": "preact build && preact serve",
-    "dev": "parcel -p 3021 index.html"
+    "build": "parcel build index.html",
+    "dev": "parcel index.html -p 3021"
   },
   "dependencies": {
     "preact": "^8.2.1",
@@ -24,8 +22,14 @@
     "parcel-bundler": "^1.8.1"
   },
   "babel": {
-    "presets": ["env", "stage-3", "preact"],
-    "plugins": ["transform-class-properties"]
+    "presets": [
+      "env",
+      "stage-3",
+      "preact"
+    ],
+    "plugins": [
+      "transform-class-properties"
+    ]
   },
   "prettier": {
     "semi": false,
