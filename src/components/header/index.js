@@ -13,14 +13,15 @@ import 'preact-material-components/Toolbar/style.css'
 // import style from './style';
 
 export default class Header extends Component {
-  closeDrawer() {
-    this.drawer.MDComponent.open = false
-    this.state = {
-      darkThemeEnabled: false
-    }
+  state = {
+    darkThemeEnabled: false
   }
 
-  openDrawer() {
+  closeDrawer = () => {
+    this.drawer.MDComponent.open = false
+  }
+
+  openDrawer = () => {
     this.drawer.MDComponent.open = true
   }
 
